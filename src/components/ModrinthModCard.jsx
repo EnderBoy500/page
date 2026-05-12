@@ -1,0 +1,63 @@
+import {useState} from "react";
+import "./mod_card.css"
+
+function ModrinthModCard({modId = "", status = "supported"}) {
+    const modUrl = `https://api.modrinth.com/v2/project/${modId}`
+    const [iconUrl, setIconUrl] = useState("");
+    const [modTitle, setModTitle] = useState("");
+    const [modDesc, setModDesc] = useState("");
+    const [modDowloads, setModDownloads] = useState(0);
+
+    fetch(modUrl).then(response => response.json()).then(data => {
+        setIconUrl(data.icon_url)
+        setModTitle(data.title)
+        setModDesc(data.description)
+        setModDownloads(data.downloads)
+    }).catch(error => console.error(error));
+
+    function goToModPage() {
+        document.location = `https://modrinth.com/mod/${modId}`
+    }
+
+    function supportMe() {
+        document.location = "https://www.patreon.com/c/u95057572"
+    }
+
+    function goToIssues() {
+        document.location = "https://github.com/EnderBoy500/Issues/issues"
+    }
+
+    function chooseStatusColor() {
+        if (status === "supported") return <h5 className="mod-card-status-supported">*</h5>
+        else if (status === "onetimespecial") return <h5 className="mod-card-status-onetime">*</h5>
+        else if (status === "discontinued") return <h5 className="mod-card-status-discontinued">*</h5>
+        else if (status === "unknown") return <h5 className="mod-card-status-unknown">*</h5>
+        else if (status === "redesigning") return <h5 className="mod-card-status-redesigning">*</h5>
+        else if (status === "replaced") return <h5 className="mod-card-status-replaced">*</h5>
+        else return null;
+    }
+
+    return(
+        <div className="mod-card">
+            <div className="mod-card-header">
+                <img className="mod-icon" src={iconUrl} alt="Couldn't find mod icon"/>
+                <div className="mod-card-info">
+                    <h3>&nbsp; {modTitle}</h3>
+                    <div className="mod-card-downloads">
+                        <img title="Downloads" src="/downloads.png" alt="Downloads"/>
+                        <h4>{modDowloads}</h4>
+                    </div>
+                </div>
+            </div>
+            <p className="mod-desc">{modDesc}</p>
+            <div className="mod-card-badges">
+                <img title="Report Bugs" src="/issues.png" alt="Failed to load icon" onClick={goToIssues}/>
+                <img title="More About This Project" src="/info.png" alt="Failed to load icon"/>
+                <img title="Support Me!" className="patreon-icon" src="/patreon.png" alt="Failed to load icon" onClick={supportMe}/>
+                <img title="Download from Modrinth" src="/download-modrinth.png" alt="Download" onClick={goToModPage}/>
+            </div>
+        </div>
+    );
+}
+
+export default ModrinthModCard
