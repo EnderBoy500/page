@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://enderboy.github.io/page",
+  "homepage": "https://enderboy500.github.io/page",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
