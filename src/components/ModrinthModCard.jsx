@@ -52,7 +52,6 @@ function ModrinthModCard({modId = "", status = "supported", isOpenSource = false
 
     return(
         <div className="mod-card">
-            <h3>{chooseStatusColor()}</h3>
             <div className="mod-card-header">
                 <img className="mod-icon" src={iconUrl} alt="Couldn't find mod icon"/>
                 <div className="mod-card-info">
