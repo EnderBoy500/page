@@ -1,6 +1,7 @@
 .mod-card {
     color: white;
     background-color: #1B1B1B;
+    background: image("https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/modrinth-mod-card-background.png");
     width: 350px;
     height: 250px;
     border-radius: 25px;
