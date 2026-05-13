@@ -15,8 +15,10 @@ function NavBar({isHome = true}) {
     return(
         <div className="nav-main">
             {!isHome ? <h2 className="home" onClick={returnHome}>Home</h2> : null}
-            <img title="Support Me!" className="patreon-icon" src="/patreon.png" alt="Failed to load icon" onClick={supportMe}/>
-            <img title="About Me!" className="about-me-icon" src="/enderboy.icon.png" alt="Failed to load icon" onClick={goToAboutMe}/>
+            <img title="Support Me!" className="patreon-icon" src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/patreon.png"
+                 alt="Failed to load icon" onClick={supportMe}/>
+            <img title="About Me!" className="about-me-icon" src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/enderboy.icon.png"
+                 alt="Failed to load icon" onClick={goToAboutMe}/>
         </div>
     );
 }

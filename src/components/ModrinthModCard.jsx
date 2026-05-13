@@ -44,17 +44,21 @@ function ModrinthModCard({modId = "", status = "supported"}) {
                 <div className="mod-card-info">
                     <h3>&nbsp; {modTitle}</h3>
                     <div className="mod-card-downloads">
-                        <img title="Downloads" src="/downloads.png" alt="Downloads"/>
+                        <img title="Downloads" src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/download-gray.png" alt="Downloads"/>
                         <h4>{modDowloads}</h4>
                     </div>
                 </div>
             </div>
             <p className="mod-desc">{modDesc}</p>
             <div className="mod-card-badges">
-                <img title="Report Bugs" src="/issues.png" alt="Failed to load icon" onClick={goToIssues}/>
-                <img title="More About This Project" src="/info.png" alt="Failed to load icon"/>
-                <img title="Support Me!" className="patreon-icon" src="/patreon.png" alt="Failed to load icon" onClick={supportMe}/>
-                <img title="Download from Modrinth" src="/download-modrinth.png" alt="Download" onClick={goToModPage}/>
+                <img title="Report Bugs" src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/issues.png"
+                     alt="Failed to load icon" onClick={goToIssues}/>
+                <img title="More About This Project" src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/info.png"
+                     alt="Failed to load icon"/>
+                <img title="Support Me!" className="patreon-icon" src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/patreon.png"
+                     alt="Failed to load icon" onClick={supportMe}/>
+                <img title="Download from Modrinth" src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/download-green.png"
+                     alt="Download" onClick={goToModPage}/>
             </div>
         </div>
     );
