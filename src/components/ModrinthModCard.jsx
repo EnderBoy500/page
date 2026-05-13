@@ -7,7 +7,7 @@ function ModrinthModCard({modId = "", status = "supported", isOpenSource = false
     const [iconUrl, setIconUrl] = useState("");
     const [modTitle, setModTitle] = useState("");
     const [modDesc, setModDesc] = useState("");
-    const [modDowloads, setModDownloads] = useState(0);
+    const [modDownloads, setModDownloads] = useState(0);
 
     fetch(modUrl).then(response => response.json()).then(data => {
         setIconUrl(data.icon_url)
@@ -55,10 +55,10 @@ function ModrinthModCard({modId = "", status = "supported", isOpenSource = false
             <div className="mod-card-header">
                 <img className="mod-icon" src={iconUrl} alt="Couldn't find mod icon"/>
                 <div className="mod-card-info">
-                    <h3>&nbsp; {modTitle}</h3>
+                    <h3>&nbsp; {modTitle} &nbsp; {chooseStatusColor()}</h3>
                     <div className="mod-card-downloads">
                         <img title="Downloads" src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/download-gray.png" alt="Downloads"/>
-                        <h4>{modDowloads}</h4>
+                        <h4>{modDownloads}</h4>
                     </div>
                 </div>
             </div>

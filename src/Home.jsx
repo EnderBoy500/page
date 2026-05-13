@@ -9,6 +9,8 @@ function Home() {
             <ModrinthModCard modId="netherandend"/>
             <br/>
             <ModrinthModCard modId="enderlib" isOpenSource={true} githubRepoName="Enderlib" hasWiki={true}/>
+            <br/>
+            <ModrinthModCard modId="bellum"/>
         </div>
     </>);
 }
