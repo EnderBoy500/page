@@ -1,7 +1,8 @@
 import {useState} from "react";
+import {GoBook} from "react-icons/go";
 import "./mod_card.css"
 
-function ModrinthModCard({modId = "", status = "supported"}) {
+function ModrinthModCard({modId = "", status = "supported", isOpenSource = false, githubRepoName = "", hasWiki = false}) {
     const modUrl = `https://api.modrinth.com/v2/project/${modId}`
     const [iconUrl, setIconUrl] = useState("");
     const [modTitle, setModTitle] = useState("");
@@ -27,6 +28,18 @@ function ModrinthModCard({modId = "", status = "supported"}) {
         document.location = "https://github.com/EnderBoy500/Issues/issues"
     }
 
+    function goToGithubPage() {
+        if (isOpenSource) {
+            document.location = `https://github.com/EnderBoy500/${githubRepoName}`
+        }
+    }
+
+    function goToWiki() {
+        if (isOpenSource) {
+            document.location = `https://github.com/EnderBoy500/${githubRepoName}/wiki`
+        }
+    }
+
     function chooseStatusColor() {
         if (status === "supported") return <h5 className="mod-card-status-supported">*</h5>
         else if (status === "onetimespecial") return <h5 className="mod-card-status-onetime">*</h5>
@@ -49,8 +62,10 @@ function ModrinthModCard({modId = "", status = "supported"}) {
                     </div>
                 </div>
             </div>
-            <p className="mod-desc">{modDesc}</p>
             <div className="mod-card-badges">
+                {hasWiki ? <GoBook size={24} className="mod-card-badges-wiki" onClick={goToWiki}/> : null}
+                {isOpenSource ? <img title="Go To Source Code" src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/github-logo.png" alt="Failed to load icon"
+                                     onClick={goToGithubPage}/> : null}
                 <img title="Report Bugs" src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/issues.png"
                      alt="Failed to load icon" onClick={goToIssues}/>
                 <img title="More About This Project" src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/info.png"
@@ -60,6 +75,7 @@ function ModrinthModCard({modId = "", status = "supported"}) {
                 <img title="Download from Modrinth" src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/download-green.png"
                      alt="Download" onClick={goToModPage}/>
             </div>
+            <p className="mod-desc">{modDesc}</p>
         </div>
     );
 }

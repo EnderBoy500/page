@@ -64,6 +64,14 @@
     margin: 9px;
 }
 
+.mod-card-badges-wiki {
+    width: 35px;
+    height: 35px;
+    justify-content: right;
+    cursor: pointer;
+    margin: 9px;
+}
+
 .mod-icon {
     border-radius: 15px;
     width: 130px;
