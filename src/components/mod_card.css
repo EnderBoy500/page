@@ -61,7 +61,6 @@
     display: flex;
     justify-content: right;
     align-self: end;
-    margin-right: 5px;
     margin-top: 30px;
     margin-bottom: 15px;
 }
@@ -71,7 +70,7 @@
     height: 35px;
     justify-content: right;
     cursor: pointer;
-    margin: 9px;
+    margin: 7px;
 }
 
 .mod-card-badges-github {
