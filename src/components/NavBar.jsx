@@ -1,6 +1,6 @@
 function NavBar({isHome = true}) {
     function goToAboutMe() {
-        document.location = "../../about_me.html"
+        document.location = "https://enderboy500.github.io/page/#/about"
     }
 
     function supportMe() {
@@ -8,7 +8,7 @@ function NavBar({isHome = true}) {
     }
 
     function returnHome() {
-        document.location = "../../index.html"
+        document.location = "https://enderboy500.github.io/page/#/"
     }
 
 
