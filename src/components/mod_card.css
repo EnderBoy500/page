@@ -56,13 +56,12 @@
 }
 
 .mod-card-badges {
-    width: 350px;
+    width: 325px;
     height: 55px;
     display: flex;
     justify-content: right;
     margin-top: 25px;
     margin-bottom: 15px;
-    padding-right: 35px;
 }
 
 .mod-card-badges img {
