@@ -19,6 +19,7 @@
     }
 }
 
+
 .mod-card p {
     padding: 10px;
 }
@@ -26,6 +27,10 @@
 .mod-card-header {
     display: grid;
     grid-template-columns: 35% 65%;
+}
+
+.mod-card-header img {
+    scale: 80%;
 }
 
 .mod-card-info {
@@ -57,6 +62,7 @@
     display: flex;
     justify-content: right;
     margin-top: 25px;
+    margin-bottom: 15px;
 }
 
 .mod-card-badges img {
