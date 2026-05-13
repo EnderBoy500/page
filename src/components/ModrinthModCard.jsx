@@ -62,6 +62,7 @@ function ModrinthModCard({modId = "", status = "supported", isOpenSource = false
                     </div>
                 </div>
             </div>
+            <p className="mod-desc">{modDesc}</p>
             <div className="mod-card-badges">
                 {hasWiki ? <GoBook size={24} className="mod-card-badges-wiki" onClick={goToWiki}/> : null}
                 {isOpenSource ? <img title="Go To Source Code" src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/github-logo.png" alt="Failed to load icon"
@@ -75,7 +76,6 @@ function ModrinthModCard({modId = "", status = "supported", isOpenSource = false
                 <img title="Download from Modrinth" src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/download-green.png"
                      alt="Download" onClick={goToModPage}/>
             </div>
-            <p className="mod-desc">{modDesc}</p>
         </div>
     );
 }
