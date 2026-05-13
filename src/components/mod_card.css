@@ -12,10 +12,8 @@
     margin: 15px;
 }
 
-@media (min-width: 768px) {
-    .mod-card:hover {
-        scale: 105%;
-    }
+.mod-card:hover {
+    scale: 105%;
 }
 
 .mod-card p {
