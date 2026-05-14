@@ -6,7 +6,7 @@ function Home() {
         <NavBar isHome={true}/>
         <br/>
         <div className="mod-card-list">
-            <ModrinthModCard modId="netherandend" status="redesigning"/>
+            <ModrinthModCard modId="netherandend" status="replaced"/>
             <br/>
             <ModrinthModCard modId="enderlib" isOpenSource={true} githubRepoName="Enderlib" hasWiki={true}/>
             <br/>
