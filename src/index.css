@@ -14,7 +14,7 @@ body {
   color: white;
   width: 100vw;
   height: 50px;
-  align-content: end;
+  align-items: end;
 }
 
 .mod-card-list {
