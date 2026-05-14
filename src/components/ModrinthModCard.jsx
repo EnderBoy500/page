@@ -65,7 +65,7 @@ function ModrinthModCard({modId = "", status = "supported", isOpenSource = false
             </div>
             <p className="mod-desc">{modDesc}</p>
             <div className="mod-card-badges">
-                {hasWiki ? <GoBook size={24} title="Go To Wiki" className="mod-card-badges-wiki" onClick={goToWiki}/> : null}
+                {hasWiki ? <GoBook size={24} className="mod-card-badges-wiki" onClick={goToWiki}/> : null}
                 {isOpenSource ? <img title="Go To Source Code" className="mod-card-badges-github" src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/github-logo.png" alt="Failed to load icon"
                                      onClick={goToGithubPage}/> : null}
                 <img title="Report Bugs" src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/issues.png"
