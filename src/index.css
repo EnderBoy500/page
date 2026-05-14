@@ -5,6 +5,7 @@ body {
 
 @media (max-width: 768px) {
   .mod-card {
+    scale: 100%;
     margin-right: 20%;
   }
 }
