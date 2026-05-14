@@ -47,6 +47,7 @@ function ModrinthModCard({modId = "", status = "supported", isOpenSource = false
         else if (status === "unknown") return <label title="Status: Unknown" className="mod-card-status-unknown">*</label>
         else if (status === "redesigning") return <label title="Status: Redesigning" className="mod-card-status-redesigning">*</label>
         else if (status === "replaced") return <label title="Status: Replaced" className="mod-card-status-replaced">*</label>
+        else if (status === "tempoutorder") return <label title="Status: Temporarily Out of Order" className="mod-card-status-tempoutorder">*</label>
         else return null;
     }
 

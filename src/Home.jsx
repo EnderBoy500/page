@@ -12,13 +12,13 @@ function Home() {
             <br/>
             <ModrinthModCard modId="enderlib" isOpenSource={true} githubRepoName="Enderlib" hasWiki={true}/>
             <br/>
-            <ModrinthModCard modId="tricksandtraps" status="discontinued"/>
+            <ModrinthModCard modId="tricks-and-traps" status="discontinued"/>
             <br/>
             <ModrinthModCard modId="lootbundles" status="discontinued"/>
             <br/>
             <ModrinthModCard modId="stains-and-colors" status="unknown"/>
             <br/>
-            <ModrinthModCard modId="allay-vex-conversion"/>
+            <ModrinthModCard modId="allay-vex-conversion" status="tempoutorder"/>
             <br/>
             <ModrinthModCard modId="bellum"/>
         </div>

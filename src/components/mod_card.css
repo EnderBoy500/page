@@ -54,6 +54,11 @@
     text-align: right;
     margin-right: 40px;
 }
+.mod-card-status-tempoutorder {
+    color: yellow;
+    text-align: right;
+    margin-right: 40px;
+}
 
 .mod-card-header {
     display: grid;
