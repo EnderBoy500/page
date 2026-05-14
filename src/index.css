@@ -3,7 +3,7 @@ body {
   margin: 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .mod-card {
     scale: 80%;
     margin-right: 20%;
