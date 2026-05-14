@@ -23,6 +23,12 @@ body {
   flex-wrap: wrap;
 }
 
+@media (max-width: 767px) {
+  .mod-card-list {
+    gap: 10px;
+  }
+}
+
 .home {
   align-self: center;
   margin-left: 20px;
