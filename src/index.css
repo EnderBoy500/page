@@ -24,7 +24,7 @@ body {
 }
 
 @media (max-width: 767px) {
-  .mod-card-list img, video {
+  .mod-card-list .mod-card{
     max-width: 100%;
     height: auto;
   }
