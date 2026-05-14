@@ -19,11 +19,38 @@
     }
 }
 
+
 .mod-card p {
     padding: 10px;
 }
 
 .mod-card-status-supported {
+    color: limegreen;
+    text-align: right;
+    margin-right: 40px;
+}
+.mod-card-status-onetime {
+    color: orange;
+    text-align: right;
+    margin-right: 40px;
+}
+.mod-card-status-discontinued {
+    color: red;
+    text-align: right;
+    margin-right: 40px;
+}
+.mod-card-status-unknown {
+    color: darkmagenta;
+    text-align: right;
+    margin-right: 40px;
+}
+.mod-card-status-redesigning {
+    color: darkblue;
+    text-align: right;
+    margin-right: 40px;
+}
+.mod-card-status-redesigning {
+    color: magenta;
     text-align: right;
     margin-right: 40px;
 }
