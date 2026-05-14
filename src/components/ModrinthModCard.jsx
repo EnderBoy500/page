@@ -41,12 +41,12 @@ function ModrinthModCard({modId = "", status = "supported", isOpenSource = false
     }
 
     function chooseStatusColor() {
-        if (status === "supported") return <label className="mod-card-status-supported">*</label>
-        else if (status === "onetimespecial") return <label className="mod-card-status-onetime">*</label>
-        else if (status === "discontinued") return <label className="mod-card-status-discontinued">*</label>
-        else if (status === "unknown") return <label className="mod-card-status-unknown">*</label>
-        else if (status === "redesigning") return <label className="mod-card-status-redesigning">*</label>
-        else if (status === "replaced") return <label className="mod-card-status-replaced">*</label>
+        if (status === "supported") return <label title="Supported" className="mod-card-status-supported">*</label>
+        else if (status === "onetimespecial") return <label title="One-time Special" className="mod-card-status-onetime">*</label>
+        else if (status === "discontinued") return <label title="Discontinued" className="mod-card-status-discontinued">*</label>
+        else if (status === "unknown") return <label title="Unknown" className="mod-card-status-unknown">*</label>
+        else if (status === "redesigning") return <label title="Redesigning" className="mod-card-status-redesigning">*</label>
+        else if (status === "replaced") return <label title="Replaced" className="mod-card-status-replaced">*</label>
         else return null;
     }
 
