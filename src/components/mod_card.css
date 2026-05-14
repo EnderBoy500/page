@@ -23,6 +23,10 @@
     padding: 10px;
 }
 
+.mod-card-status-supported {
+    text-align: right;
+}
+
 .mod-card-header {
     display: grid;
     grid-template-columns: 35% 65%;
