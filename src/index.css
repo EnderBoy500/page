@@ -10,7 +10,7 @@ body {
   }
 
   .mod-card-list {
-    justify-content: left;
+    scale: 80%;
   }
 }
 
