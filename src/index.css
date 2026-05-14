@@ -3,13 +3,6 @@ body {
   margin: 0;
 }
 
-@media (max-width: 768px) {
-  .mod-card {
-    scale: 100%;
-    margin-right: 20%;
-  }
-}
-
 .nav-main {
   background-color: #1B1B1B;
   color: white;
