@@ -14,7 +14,8 @@ body {
   color: white;
   width: 100vw;
   height: 50px;
-  align-items: end;
+  display: flex;
+  justify-content: right;
 }
 
 .mod-card-list {
@@ -34,14 +35,12 @@ body {
   border-radius: 50px;
   margin: 3px;
   cursor: pointer;
-  height: 50px;
 }
 
 .patreon-icon {
   border: 1px solid lightgray;
   border-radius: 10px;
   margin: 5px;
-  height: 50px;
   cursor: pointer;
 }
 
