@@ -24,8 +24,9 @@ body {
 }
 
 @media (max-width: 767px) {
-  .mod-card-list {
-    gap: 10px;
+  .mod-card-list img, video {
+    max-width: 100%;
+    height: auto;
   }
 }
 
