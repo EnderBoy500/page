@@ -2,7 +2,6 @@
     color: white;
     background-size: 100% 100%;
     background-image: url('https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/modrinth-mod-card-background.png');
-    width: 350px;
     height: 250px;
     border-radius: 25px;
     padding: 12px 20px 20px;
@@ -14,6 +13,10 @@
 }
 
 @media (min-width: 769px) {
+    .mod-card {
+        width: 350px;
+    }
+
     .mod-card:hover {
         scale: 105%;
     }
