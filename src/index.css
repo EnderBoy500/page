@@ -7,6 +7,10 @@ body {
   .mod-card {
     width: 100vw;
   }
+
+  .nav-main {
+    width: 100vw;
+  }
 }
 
 .nav-main {
