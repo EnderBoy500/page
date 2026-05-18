@@ -22,6 +22,12 @@
     }
 }
 
+@media (max-width: 768px) {
+    .mod-card {
+        width: 95vw;
+    }
+}
+
 .mod-card p {
     padding: 10px;
 }
