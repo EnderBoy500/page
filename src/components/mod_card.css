@@ -24,8 +24,12 @@
 
 @media (max-width: 768px) {
     .mod-card {
-        width: 90vw;
+        width: 85vw;
         font-size: 20px;
+    }
+
+    .mod-card-status {
+        scale: 85%;
     }
 
     .mod-card-header {
