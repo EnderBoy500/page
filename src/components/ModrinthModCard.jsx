@@ -41,13 +41,35 @@ function ModrinthModCard({modId = "", status = "supported", isOpenSource = false
     }
 
     function chooseStatusColor() {
-        if (status === "supported") return <label title="Status: Supported" style="color: greenyellow" className="mod-card-status">*</label>
-        else if (status === "onetimespecial") return <label title="Status: One-time Special" style="color: orange" className="mod-card-status">*</label>
-        else if (status === "discontinued") return <label title="Status: Discontinued" style="color: red" className="mod-card-status">*</label>
-        else if (status === "unknown") return <label title="Status: Unknown" style="color: darkmagenta" className="mod-card-status">*</label>
-        else if (status === "redesigning") return <label title="Status: Redesigning" style="color: darkblue" className="mod-card-status">*</label>
-        else if (status === "replaced") return <label title="Status: Replaced" style="color: magenta" className="mod-card-status">*</label>
-        else if (status === "tempoutorder") return <label title="Status: Temporarily Out of Order" style="color: yellow" className="mod-card-status">*</label>
+        const supported = {
+            color: "greenyellow",
+        }
+        const onetime = {
+            color: "orange",
+        }
+        const discontinued = {
+            color: "red",
+        }
+        const unknown = {
+            color: "darkmagenta",
+        }
+        const redesigning = {
+            color: "darkblue",
+        }
+        const replaced = {
+            color: "magenta",
+        }
+        const tempOutOrder = {
+            color: "yellow",
+        }
+
+        if (status === "supported") return <label title="Status: Supported" style={supported} className="mod-card-status">*</label>
+        else if (status === "onetimespecial") return <label title="Status: One-time Special" style={onetime} className="mod-card-status">*</label>
+        else if (status === "discontinued") return <label title="Status: Discontinued" style={discontinued} className="mod-card-status">*</label>
+        else if (status === "unknown") return <label title="Status: Unknown" style={unknown} className="mod-card-status">*</label>
+        else if (status === "redesigning") return <label title="Status: Redesigning" style={redesigning} className="mod-card-status">*</label>
+        else if (status === "replaced") return <label title="Status: Replaced" style={replaced} className="mod-card-status">*</label>
+        else if (status === "tempoutorder") return <label title="Status: Temporarily Out of Order" style={tempOutOrder} className="mod-card-status">*</label>
         else return null;
     }
 
