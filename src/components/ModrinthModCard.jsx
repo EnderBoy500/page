@@ -77,7 +77,7 @@ function ModrinthModCard({modId = "", status = "supported", isOpenSource = false
         if (window.screen.width <= 768) {
             const scale = {
                 scale: "80%",
-                marginRight: "10%",
+                paddingRight: "10%",
             }
 
             return (
