@@ -24,26 +24,29 @@
 
 @media (max-width: 768px) {
     .mod-card {
-        width: 84vw;
+        width: 82vw;
         font-size: 20px;
         margin-right: 0;
     }
 
     .mod-card-status {
         scale: 82%;
-        padding-right: 15px;
+        padding-right: 28px;
     }
 
     .mod-card-header {
         scale: 82%;
+        padding-right: 28px;
     }
 
     .mod-desc {
         scale: 82%;
+        padding-right: 28px;
     }
 
     .mod-card-badges {
         scale: 82%;
+        padding-right: 28px;
     }
 }
 
