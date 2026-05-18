@@ -26,38 +26,7 @@
     padding: 10px;
 }
 
-.mod-card-status-supported {
-    color: greenyellow;
-    text-align: right;
-    margin-right: 40px;
-}
-.mod-card-status-onetime {
-    color: orange;
-    text-align: right;
-    margin-right: 40px;
-}
-.mod-card-status-discontinued {
-    color: red;
-    text-align: right;
-    margin-right: 40px;
-}
-.mod-card-status-unknown {
-    color: darkmagenta;
-    text-align: right;
-    margin-right: 40px;
-}
-.mod-card-status-redesigning {
-    color: darkblue;
-    text-align: right;
-    margin-right: 40px;
-}
-.mod-card-status-replaced {
-    color: magenta;
-    text-align: right;
-    margin-right: 40px;
-}
-.mod-card-status-tempoutorder {
-    color: yellow;
+.mod-card-status {
     text-align: right;
     margin-right: 40px;
 }

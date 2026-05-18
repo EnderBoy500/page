@@ -41,13 +41,13 @@ function ModrinthModCard({modId = "", status = "supported", isOpenSource = false
     }
 
     function chooseStatusColor() {
-        if (status === "supported") return <label title="Status: Supported" className="mod-card-status-supported">*</label>
-        else if (status === "onetimespecial") return <label title="Status: One-time Special" className="mod-card-status-onetime">*</label>
-        else if (status === "discontinued") return <label title="Status: Discontinued" className="mod-card-status-discontinued">*</label>
-        else if (status === "unknown") return <label title="Status: Unknown" className="mod-card-status-unknown">*</label>
-        else if (status === "redesigning") return <label title="Status: Redesigning" className="mod-card-status-redesigning">*</label>
-        else if (status === "replaced") return <label title="Status: Replaced" className="mod-card-status-replaced">*</label>
-        else if (status === "tempoutorder") return <label title="Status: Temporarily Out of Order" className="mod-card-status-tempoutorder">*</label>
+        if (status === "supported") return <label title="Status: Supported" style="color: greenyellow" className="mod-card-status">*</label>
+        else if (status === "onetimespecial") return <label title="Status: One-time Special" style="color: orange" className="mod-card-status">*</label>
+        else if (status === "discontinued") return <label title="Status: Discontinued" style="color: red" className="mod-card-status">*</label>
+        else if (status === "unknown") return <label title="Status: Unknown" style="color: darkmagenta" className="mod-card-status">*</label>
+        else if (status === "redesigning") return <label title="Status: Redesigning" style="color: darkblue" className="mod-card-status">*</label>
+        else if (status === "replaced") return <label title="Status: Replaced" style="color: magenta" className="mod-card-status">*</label>
+        else if (status === "tempoutorder") return <label title="Status: Temporarily Out of Order" style="color: yellow" className="mod-card-status">*</label>
         else return null;
     }
 
