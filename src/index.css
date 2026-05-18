@@ -4,7 +4,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .mod-card {
+  .mod-card-list {
     width: 100vw;
   }
 }
