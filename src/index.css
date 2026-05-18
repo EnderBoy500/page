@@ -21,7 +21,6 @@ body {
 .mod-card-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
 }
 
 .home {
