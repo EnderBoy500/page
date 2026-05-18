@@ -38,10 +38,12 @@
 
     .mod-card-header {
         scale: 82%;
+        grid-template-columns: 45% 55%;
     }
 
     .mod-desc {
         scale: 82%;
+        width: 310px;
     }
 
     .mod-card-badges {
