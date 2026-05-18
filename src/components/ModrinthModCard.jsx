@@ -73,90 +73,43 @@ function ModrinthModCard({modId = "", status = "supported", isOpenSource = false
         else return null;
     }
 
-    function setModCard() {
-        /*if (window.screen.width <= 768) {
-            const scale = {
-                width: "100vw",
-            }
-
-            return (
-                <div className="mod-card" style={scale}>
-                    {chooseStatusColor()}
-                    <div className="mod-card-header">
-                        <img className="mod-icon" src={iconUrl} alt="Couldn't find mod icon"/>
-                        <div className="mod-card-info">
-                            <h3>&nbsp; {modTitle}</h3>
-                            <div className="mod-card-downloads">
-                                <img title="Downloads"
-                                     src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/download-gray.png"
-                                     alt="Downloads"/>
-                                <h4>{modDownloads}</h4>
-                            </div>
-                        </div>
+    return(
+        <div className="mod-card">
+            {chooseStatusColor()}
+            <div className="mod-card-header">
+                <img className="mod-icon" src={iconUrl} alt="Couldn't find mod icon"/>
+                <div className="mod-card-info">
+                    <h3>&nbsp; {modTitle}</h3>
+                    <div className="mod-card-downloads">
+                        <img title="Downloads"
+                             src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/download-gray.png"
+                             alt="Downloads"/>
+                        <h4>{modDownloads}</h4>
                     </div>
-                    <p className="mod-desc">{modDesc}</p>
-                    <div className="mod-card-badges">
-                        {hasWiki ? <GoBook size={24} className="mod-card-badges-wiki" onClick={goToWiki}/> : null}
-                        {isOpenSource ? <img title="Go To Source Code" className="mod-card-badges-github"
-                                             src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/github-logo.png"
-                                             alt="Failed to load icon"
-                                             onClick={goToGithubPage}/> : null}
-                        <img title="Report Bugs"
-                             src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/issues.png"
-                             alt="Failed to load icon" onClick={goToIssues}/>
-                        <img title="More About This Project"
-                             src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/info.png"
-                             alt="Failed to load icon"/>
-                        <img title="Support Me!" className="patreon-icon"
-                             src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/patreon.png"
-                             alt="Failed to load icon" onClick={supportMe}/>
-                        <img title="Download from Modrinth"
-                             src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/download-green.png"
-                             alt="Download" onClick={goToModPage}/>
-                    </div>
-                </div>
-            );
-        }*/
-        return (
-            <div className="mod-card">
-                {chooseStatusColor()}
-                <div className="mod-card-header">
-                    <img className="mod-icon" src={iconUrl} alt="Couldn't find mod icon"/>
-                    <div className="mod-card-info">
-                        <h3>&nbsp; {modTitle}</h3>
-                        <div className="mod-card-downloads">
-                            <img title="Downloads"
-                                 src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/download-gray.png"
-                                 alt="Downloads"/>
-                            <h4>{modDownloads}</h4>
-                        </div>
-                    </div>
-                </div>
-                <p className="mod-desc">{modDesc}</p>
-                <div className="mod-card-badges">
-                    {hasWiki ? <GoBook size={24} className="mod-card-badges-wiki" onClick={goToWiki}/> : null}
-                    {isOpenSource ? <img title="Go To Source Code" className="mod-card-badges-github"
-                                         src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/github-logo.png"
-                                         alt="Failed to load icon"
-                                         onClick={goToGithubPage}/> : null}
-                    <img title="Report Bugs"
-                         src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/issues.png"
-                         alt="Failed to load icon" onClick={goToIssues}/>
-                    <img title="More About This Project"
-                         src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/info.png"
-                         alt="Failed to load icon"/>
-                    <img title="Support Me!" className="patreon-icon"
-                         src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/patreon.png"
-                         alt="Failed to load icon" onClick={supportMe}/>
-                    <img title="Download from Modrinth"
-                         src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/download-green.png"
-                         alt="Download" onClick={goToModPage}/>
                 </div>
             </div>
-        );
-    }
-
-    return(setModCard());
+            <p className="mod-desc">{modDesc}</p>
+            <div className="mod-card-badges">
+                {hasWiki ? <GoBook size={24} className="mod-card-badges-wiki" onClick={goToWiki}/> : null}
+                {isOpenSource ? <img title="Go To Source Code" className="mod-card-badges-github"
+                                     src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/github-logo.png"
+                                     alt="Failed to load icon"
+                                     onClick={goToGithubPage}/> : null}
+                <img title="Report Bugs"
+                     src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/issues.png"
+                     alt="Failed to load icon" onClick={goToIssues}/>
+                <img title="More About This Project"
+                     src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/info.png"
+                     alt="Failed to load icon"/>
+                <img title="Support Me!" className="patreon-icon"
+                     src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/patreon.png"
+                     alt="Failed to load icon" onClick={supportMe}/>
+                <img title="Download from Modrinth"
+                     src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/download-green.png"
+                     alt="Download" onClick={goToModPage}/>
+            </div>
+        </div>
+    );
 }
 
 export default ModrinthModCard
