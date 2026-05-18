@@ -74,9 +74,9 @@ function ModrinthModCard({modId = "", status = "supported", isOpenSource = false
     }
 
     function setModCard() {
-/*        if (window.screen.width <= 768) {
+        if (window.screen.width <= 768) {
             const scale = {
-                scale: "80%",
+                scale: "95%",
             }
 
             return (
@@ -116,7 +116,7 @@ function ModrinthModCard({modId = "", status = "supported", isOpenSource = false
                     </div>
                 </div>
             );
-        }*/
+        }
         return (
             <div className="mod-card">
                 {chooseStatusColor()}
