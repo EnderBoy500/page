@@ -34,7 +34,7 @@
     }
     @media (orientation: landscape) {
         .mod-card {
-            width: 50%;
+            width: 40%;
             font-size: 20px;
             margin-right: 0;
             padding-right: 25px;
