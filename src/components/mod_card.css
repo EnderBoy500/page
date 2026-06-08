@@ -25,7 +25,7 @@
 @media (max-width: 768px) and (pointer: coarse) {
     @media (orientation: portrait) {
         .mod-card {
-            width: 82vw;
+            width: 50vw;
             font-size: 20px;
             margin-right: 0;
             padding-right: 25px;
@@ -43,22 +43,22 @@
     }
 
     .mod-card-status {
-        scale: 82%;
+        scale: 50%;
         padding-right: 28px;
     }
 
     .mod-card-header {
-        scale: 82%;
+        scale: 50%;
         grid-template-columns: 45% 55%;
     }
 
     .mod-desc {
-        scale: 82%;
+        scale: 50%;
         width: 310px;
     }
 
     .mod-card-badges {
-        scale: 82%;
+        scale: 50%;
     }
 }
 
