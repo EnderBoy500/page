@@ -3,7 +3,7 @@ body {
   margin: 0;
 }
 
-@media (max-width: 768px) {
+@media screen and  (max-width: 768px) {
   .mod-card-list {
       width: 100vw;
   }
