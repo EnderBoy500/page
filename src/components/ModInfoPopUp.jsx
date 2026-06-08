@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-function ModInfoPopUp({modId = "", status = "supported"}) {
+function ModInfoPopUp({modId = "", status = "supported", onClose}) {
     const modUrl = `https://api.modrinth.com/v2/project/${modId}`
     const [iconUrl, setIconUrl] = useState("");
     const [modTitle, setModTitle] = useState("");

@@ -1,4 +1,5 @@
 import {useState} from "react";
+import { createPortal } from 'react-dom';
 import {GoBook} from "react-icons/go";
 import "./mod_card.css"
 import ModInfoPopUp from "./ModInfoPopUp.jsx";
@@ -10,6 +11,8 @@ function ModrinthModCard({modId = "", status = "supported", isOpenSource = false
     const [modDesc, setModDesc] = useState("");
     const [modDownloads, setModDownloads] = useState(0);
 
+    const [showInfoPopUp, setShowInfoPopUp] = useState(false);
+
     fetch(modUrl).then(response => response.json()).then(data => {
         setIconUrl(data.icon_url)
         setModTitle(data.title)
@@ -19,11 +22,6 @@ function ModrinthModCard({modId = "", status = "supported", isOpenSource = false
 
     function goToModPage() {
         document.location = `https://modrinth.com/mod/${modId}`
-    }
-
-    function addModInfoPopUp() {
-        console.log("added info popup")
-        return (<ModInfoPopUp modId={modId}/>);
     }
 
     function supportMe() {
@@ -106,7 +104,7 @@ function ModrinthModCard({modId = "", status = "supported", isOpenSource = false
                      alt="Failed to load icon" onClick={goToIssues}/>
                 <img title="More About This Project"
                      src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/info.png"
-                     alt="Failed to load icon" onClick={addModInfoPopUp}/>
+                     alt="Failed to load icon" onClick={() => setShowInfoPopUp(true)}/>
                 <img title="Support Me!" className="patreon-icon"
                      src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/patreon.png"
                      alt="Failed to load icon" onClick={supportMe}/>
@@ -114,6 +112,9 @@ function ModrinthModCard({modId = "", status = "supported", isOpenSource = false
                      src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/download-green.png"
                      alt="Download" onClick={goToModPage}/>
             </div>
+
+            {showInfoPopUp && createPortal(<ModInfoPopUp onClose={() => setShowInfoPopUp(false)} />,
+                document.body)}
         </div>
     );
 }
