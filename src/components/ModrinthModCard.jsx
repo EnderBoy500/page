@@ -101,7 +101,7 @@ function ModrinthModCard({modId = "", status = "supported", isOpenSource = false
                      alt="Failed to load icon" onClick={goToIssues}/>
                 <img title="More About This Project"
                      src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/info.png"
-                     alt="Failed to load icon" onClick={() => <Link to={`/mod/${modId}`}/>}/>
+                     alt="Failed to load icon" onClick={() => <Link to={`/mod`} state={{modId: {modId}}}/>}/>
                 <img title="Support Me!" className="patreon-icon"
                      src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/patreon.png"
                      alt="Failed to load icon" onClick={supportMe}/>

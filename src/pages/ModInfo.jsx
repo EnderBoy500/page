@@ -1,9 +1,11 @@
-import { useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import {useState} from "react";
 
 function ModInfo() {
-    const modId = useParams();
-    const modUrl = `https://api.modrinth.com/v2/project/${modId}`
+    const location = useLocation();
+    const stateData = location.state;
+
+    const modUrl = `https://api.modrinth.com/v2/project/${stateData?.modId}`
     const [iconUrl, setIconUrl] = useState("");
     const [modTitle, setModTitle] = useState("");
     const [modPublishDate, setModPublishDate] = useState("");
