@@ -4,10 +4,8 @@ body {
 }
 
 @media (max-width: 768px) {
-  @media (orientation: portrait) {
-    .mod-card-list {
+  .mod-card-list {
       width: 100vw;
-    }
   }
 }
 

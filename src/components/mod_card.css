@@ -23,12 +23,23 @@
 }
 
 @media (max-width: 768px) {
-    .mod-card {
-        width: 82vw;
-        font-size: 20px;
-        margin-right: 0;
-        padding-right: 25px;
-        padding-left: 10px;
+    @media (orientation: portrait) {
+        .mod-card {
+            width: 82vw;
+            font-size: 20px;
+            margin-right: 0;
+            padding-right: 25px;
+            padding-left: 10px;
+        }
+    }
+    @media (orientation: landscape) {
+        .mod-card {
+            width: 82%;
+            font-size: 20px;
+            margin-right: 0;
+            padding-right: 25px;
+            padding-left: 10px;
+        }
     }
 
     .mod-card-status {
