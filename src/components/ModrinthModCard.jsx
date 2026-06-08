@@ -113,7 +113,7 @@ function ModrinthModCard({modId = "", status = "supported", isOpenSource = false
                      alt="Download" onClick={goToModPage}/>
             </div>
 
-            {showInfoPopUp && createPortal(<ModInfoPopUp onClose={() => setShowInfoPopUp(false)} />,
+            {showInfoPopUp && createPortal(<ModInfoPopUp modId={modId} onClose={() => setShowInfoPopUp(false)} />,
                 document.body)}
         </div>
     );
