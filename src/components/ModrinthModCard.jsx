@@ -1,8 +1,7 @@
 import {useState} from "react";
-import { createPortal } from 'react-dom';
 import {GoBook} from "react-icons/go";
+import { Link } from "react-router-dom";
 import "./mod_card.css"
-import ModInfoPopUp from "./ModInfoPopUp.jsx";
 
 function ModrinthModCard({modId = "", status = "supported", isOpenSource = false, githubRepoName = "", hasWiki = false}) {
     const modUrl = `https://api.modrinth.com/v2/project/${modId}`
@@ -10,8 +9,6 @@ function ModrinthModCard({modId = "", status = "supported", isOpenSource = false
     const [modTitle, setModTitle] = useState("");
     const [modDesc, setModDesc] = useState("");
     const [modDownloads, setModDownloads] = useState(0);
-
-    const [showInfoPopUp, setShowInfoPopUp] = useState(false);
 
     fetch(modUrl).then(response => response.json()).then(data => {
         setIconUrl(data.icon_url)
@@ -104,7 +101,7 @@ function ModrinthModCard({modId = "", status = "supported", isOpenSource = false
                      alt="Failed to load icon" onClick={goToIssues}/>
                 <img title="More About This Project"
                      src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/info.png"
-                     alt="Failed to load icon" onClick={() => setShowInfoPopUp(true)}/>
+                     alt="Failed to load icon" onClick={() => <Link to={`/mod/${modId}`}/>}/>
                 <img title="Support Me!" className="patreon-icon"
                      src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/patreon.png"
                      alt="Failed to load icon" onClick={supportMe}/>
@@ -112,9 +109,6 @@ function ModrinthModCard({modId = "", status = "supported", isOpenSource = false
                      src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/download-green.png"
                      alt="Download" onClick={goToModPage}/>
             </div>
-
-            {showInfoPopUp && createPortal(<ModInfoPopUp modId={modId} onClose={() => setShowInfoPopUp(false)} />,
-                document.body)}
         </div>
     );
 }

@@ -1,5 +1,5 @@
-import NavBar from "./components/NavBar.jsx";
-import ModrinthModCard from "./components/ModrinthModCard.jsx";
+import NavBar from "../components/NavBar.jsx";
+import ModrinthModCard from "../components/ModrinthModCard.jsx";
 
 function Home() {
     return(<>
