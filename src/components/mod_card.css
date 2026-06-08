@@ -22,7 +22,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (pointer: coarse) {
     @media (orientation: portrait) {
         .mod-card {
             width: 82vw;
