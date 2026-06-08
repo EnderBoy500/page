@@ -1,6 +1,7 @@
 import {useState} from "react";
 import {GoBook} from "react-icons/go";
 import "./mod_card.css"
+import ModInfoPopUp from "./ModInfoPopUp.jsx";
 
 function ModrinthModCard({modId = "", status = "supported", isOpenSource = false, githubRepoName = "", hasWiki = false}) {
     const modUrl = `https://api.modrinth.com/v2/project/${modId}`
@@ -18,6 +19,10 @@ function ModrinthModCard({modId = "", status = "supported", isOpenSource = false
 
     function goToModPage() {
         document.location = `https://modrinth.com/mod/${modId}`
+    }
+
+    function addModInfoPopUp() {
+        return <ModInfoPopUp modId={modId}/>;
     }
 
     function supportMe() {
@@ -100,7 +105,7 @@ function ModrinthModCard({modId = "", status = "supported", isOpenSource = false
                      alt="Failed to load icon" onClick={goToIssues}/>
                 <img title="More About This Project"
                      src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/info.png"
-                     alt="Failed to load icon"/>
+                     alt="Failed to load icon" onClick={addModInfoPopUp}/>
                 <img title="Support Me!" className="patreon-icon"
                      src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/patreon.png"
                      alt="Failed to load icon" onClick={supportMe}/>
