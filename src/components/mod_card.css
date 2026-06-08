@@ -43,22 +43,22 @@
     }
 
     .mod-card-status {
-        scale: 50%;
+        scale: 72%;
         padding-right: 28px;
     }
 
     .mod-card-header {
-        scale: 50%;
+        scale: 72%;
         grid-template-columns: 45% 55%;
     }
 
     .mod-desc {
-        scale: 50%;
+        scale: 72%;
         width: 310px;
     }
 
     .mod-card-badges {
-        scale: 50%;
+        scale: 72%;
     }
 }
 
