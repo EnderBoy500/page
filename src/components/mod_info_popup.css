@@ -3,6 +3,8 @@
     left: 35%;
     top: 25%;
 
+    background-color: black;
+
     width: 450px;
     height: 550px;
     border-radius: 15px;
@@ -10,5 +12,5 @@
     display: grid;
     grid-template-columns: 10% 90%;
 
-    z-index: 3;
+    z-index: 20;
 }
