@@ -22,7 +22,8 @@ function ModrinthModCard({modId = "", status = "supported", isOpenSource = false
     }
 
     function addModInfoPopUp() {
-        return <ModInfoPopUp modId={modId}/>;
+        console.log("added info popup")
+        return (<ModInfoPopUp modId={modId}/>);
     }
 
     function supportMe() {
