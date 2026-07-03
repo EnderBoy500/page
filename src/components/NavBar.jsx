@@ -1,24 +1,32 @@
-function NavBar({isHome = true}) {
+import {useState} from "react";
+
+function NavBar() {
+    const [isDropdownSelected, setDropdownSelected] = useState(false);
+
     function goToAboutMe() {
         document.location = "https://enderboy500.github.io/page/#/about"
-    }
-
-    function supportMe() {
-        document.location = "https://www.patreon.com/c/u95057572"
     }
 
     function returnHome() {
         document.location = "https://enderboy500.github.io/page/#/"
     }
 
+    function changeDropdownArrow() {
+        setDropdownSelected(!isDropdownSelected);
+    }
 
     return(
         <div className="nav-main">
-            {!isHome ? <h2 className="home" onClick={returnHome}>Home</h2> : null}
-            <img title="Support Me!" className="patreon-icon" src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/patreon.png"
-                 alt="Failed to load icon" onClick={supportMe}/>
-            <img title="About Me!" className="about-me-icon" src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/enderboy.icon.png"
-                 alt="Failed to load icon" onClick={goToAboutMe}/>
+            <img title="About Me!" className="home-icon" src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/enderboy.icon.png"
+                 alt="Failed to load icon" onClick={returnHome}/>
+
+            <div className="central-nav-buttons">
+                <button onMouseEnter={changeDropdownArrow} onMouseLeave={changeDropdownArrow}>Mods {isDropdownSelected ?
+                    <img src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/dropdown_arrow_up.png" alt="Failed to load icon"/> :
+                    <img src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/dropdown_arrow_down.png" alt="Failed to load icon"/>}</button>
+                <button>Updates</button>
+                <button onClick={goToAboutMe}>About</button>
+            </div>
         </div>
     );
 }

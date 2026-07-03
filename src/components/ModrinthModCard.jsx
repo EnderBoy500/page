@@ -1,9 +1,11 @@
 import {useState} from "react";
 import {GoBook} from "react-icons/go";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./mod_card.css"
 
 function ModrinthModCard({modId = "", status = "supported", isOpenSource = false, githubRepoName = "", hasWiki = false}) {
+    const navigate = useNavigate();
+
     const modUrl = `https://api.modrinth.com/v2/project/${modId}`
     const [iconUrl, setIconUrl] = useState("");
     const [modTitle, setModTitle] = useState("");
@@ -19,6 +21,14 @@ function ModrinthModCard({modId = "", status = "supported", isOpenSource = false
 
     function goToModPage() {
         document.location = `https://modrinth.com/mod/${modId}`
+    }
+
+    function goToAboutModPage() {
+        navigate("/mod", {
+            state: {
+                id: {modId}
+            }
+        })
     }
 
     function supportMe() {
@@ -101,7 +111,7 @@ function ModrinthModCard({modId = "", status = "supported", isOpenSource = false
                      alt="Failed to load icon" onClick={goToIssues}/>
                 <img title="More About This Project"
                      src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/info.png"
-                     alt="Failed to load icon" onClick={() => <Link to={`/mod`} state={{modId: {modId}}}/>}/>
+                     alt="Failed to load icon"/>
                 <img title="Support Me!" className="patreon-icon"
                      src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/patreon.png"
                      alt="Failed to load icon" onClick={supportMe}/>
