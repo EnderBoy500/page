@@ -41,12 +41,12 @@ body {
 .home-icon {
   border: 1px solid lightgray;
   border-radius: 15px;
-  margin: 3px;
   cursor: pointer;
   position: absolute;
   left: 10%;
   width: 45px;
   height: 45px;
+  margin-bottom: 5px;
 }
 
 .central-nav-buttons {
