@@ -11,7 +11,7 @@ function NavBar() {
         document.location = "https://enderboy500.github.io/page/#/"
     }
 
-    function changeDropdownArrow() {
+    function switchDropdownArrow() {
         setDropdownSelected(!isDropdownSelected);
     }
 
@@ -21,9 +21,11 @@ function NavBar() {
                  alt="Failed to load icon" onClick={returnHome}/>
 
             <div className="central-nav-buttons">
-                <button onMouseEnter={changeDropdownArrow} onMouseLeave={changeDropdownArrow}>Mods {isDropdownSelected ?
-                    <img src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/dropdown_arrow_up.png" alt="Failed to load icon"/> :
-                    <img src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/dropdown_arrow_down.png" alt="Failed to load icon"/>}</button>
+                <button onMouseEnter={switchDropdownArrow} onMouseLeave={switchDropdownArrow}>{<div className="central-nav-buttons-mods">
+                    Mods
+                    {isDropdownSelected ? <img className="central-nav-buttons-dropdown-arrow" src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/dropdown_arrow_up.png" alt="Failed to load icon"/> :
+                    <img className="central-nav-buttons-dropdown-arrow" src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/dropdown_arrow_down.png" alt="Failed to load icon"/>}
+                </div>}</button>
                 <button>Updates</button>
                 <button onClick={goToAboutMe}>About</button>
             </div>
