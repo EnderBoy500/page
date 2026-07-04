@@ -17,7 +17,7 @@ function NavBar() {
 
     return(
         <div className="nav-main">
-            <img title="About Me!" className="home-icon" src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/enderboy.icon.png"
+            <img className="home-icon" src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/enderboy.icon.png"
                  alt="Failed to load icon" onClick={returnHome}/>
 
             <div className="central-nav-buttons">

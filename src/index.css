@@ -44,13 +44,13 @@ body {
   cursor: pointer;
   position: absolute;
   left: 10%;
-  width: 45px;
-  height: 50px;
+  width: 47px;
+  height: 47px;
 }
 
 .central-nav-buttons {
   position: absolute;
-  left: 42%;
+  left: 40%;
   top: 1%;
   display: grid;
   grid-template-columns: 33% 33% 33%;
@@ -64,15 +64,16 @@ body {
   color: #88978f;
   cursor: pointer;
   margin-right: 5px;
+  font-size: 14px;
 }
 
 .central-nav-button-mods {
   display: grid;
   grid-template-columns: 45% 55%;
+  margin-bottom: 5px;
 }
 
 .central-nav-buttons-dropdown-arrow {
-  margin-top: 3px;
   width: 15px;
   height: 15px;
 }
