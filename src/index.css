@@ -45,14 +45,13 @@ body {
   cursor: pointer;
   position: absolute;
   left: 10%;
-  top: 1%;
   width: 45px;
   height: 45px;
 }
 
 .central-nav-buttons {
   position: absolute;
-  left: 40%;
+  left: 42%;
   top: 1%;
   display: grid;
   grid-template-columns: 33% 33% 33%;
@@ -74,6 +73,7 @@ body {
 }
 
 .central-nav-buttons-dropdown-arrow {
+  margin-top: 10px;
   width: 15px;
   height: 15px;
 }
