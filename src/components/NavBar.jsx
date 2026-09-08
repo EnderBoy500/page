@@ -1,4 +1,5 @@
 import {useState} from "react";
+import ModDropdownElement from "./ModDropdownElement.jsx";
 
 function NavBar() {
     const [isDropdownSelected, setDropdownSelected] = useState(false);
@@ -21,7 +22,7 @@ function NavBar() {
                  alt="Failed to load icon" onClick={returnHome}/>
 
             <div className="central-nav-buttons">
-                <button onMouseEnter={switchDropdownArrow} onMouseLeave={switchDropdownArrow}>{<div className="central-nav-buttons-mods">
+                <button onClick={switchDropdownArrow}>{<div className="central-nav-buttons-mods">
                     Mods
                     {isDropdownSelected ? <img className="central-nav-buttons-dropdown-arrow" src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/dropdown_arrow_up.png" alt="Failed to load icon"/> :
                     <img className="central-nav-buttons-dropdown-arrow" src="https://raw.githubusercontent.com/EnderBoy500/Data/main/assets/page/dropdown_arrow_down.png" alt="Failed to load icon"/>}
@@ -29,6 +30,17 @@ function NavBar() {
                 <button>Updates</button>
                 <button onClick={goToAboutMe}>About</button>
             </div>
+
+            {isDropdownSelected ? <div className="mod-dropdown-box">
+                <ModDropdownElement modId="netherandend"/>
+                <ModDropdownElement modId="ironandsteel"/>
+                <ModDropdownElement modId="tricks-and-traps" fontsize="18px"/>
+                <ModDropdownElement modId="lootbundles" mobileFontSize="20px"/>
+                <ModDropdownElement modId="stains-and-colors" fontsize="18px"/>
+                <ModDropdownElement modId="allay-vex-conversion" fontsize="14px"/>
+                <ModDropdownElement modId="bellum"/>
+                <ModDropdownElement modId="raven-mail"/>
+            </div> : null}
         </div>
     );
 }

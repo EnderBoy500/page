@@ -3,21 +3,6 @@ body {
   margin: 0;
 }
 
-.blur-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 10;
-
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-
 @media screen and  (max-width: 768px) {
   .mod-card-list {
       width: 100vw;
@@ -32,10 +17,106 @@ body {
   display: flex;
 }
 
-.mod-card-list {
+.info {
+  position: absolute;
+  left: 25%;
+  top: 5%;
+  text-align: center;
+  display: grid;
+  grid-template-rows: 20% 7% 73%;
+}
+
+.info-title {
+  font-size: 64px;
+  color: white;
+}
+
+.info-desc {
+  font-size: 24px;
+  margin-bottom: 7px;
+  color: dimgray;
+}
+
+.links {
+  margin-left: 23px;
+  padding-bottom: 384px;
   display: flex;
-  flex-wrap: wrap;
-  overflow-x: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-github {
+  display: flex;
+  grid-template-columns: 20% 80%;
+  border: 2px solid dimgray;
+  cursor: pointer;
+  margin: 14px;
+  width: 120px;
+  height: 40px;
+  border-radius: 7px;
+  color: white;
+  align-items: center;
+}
+
+.link-modrinth {
+  display: flex;
+  border: 2px solid #14da6a;
+  cursor: pointer;
+  margin: 14px 14px 14px 13px;
+  width: 120px;
+  height: 40px;
+  border-radius: 7px;
+  color: white;
+  align-items: center;
+}
+
+.link-youtube {
+  display: flex;
+  border: 2px solid #fd0001;
+  cursor: pointer;
+  margin: 14px;
+  width: 120px;
+  height: 40px;
+  border-radius: 7px;
+  color: white;
+  align-items: center;
+}
+
+.link-logo {
+  margin: 4px;
+  width: 32px;
+  height: 32px;
+  border-radius: 25px;
+}
+
+.link-github-text {
+  color: dimgray;
+  padding-left: 6px;
+  font-family: 'Space Mono', monospace;
+  font-weight: 600;
+  gap: 0.375rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.link-modrinth-text {
+  color: #14da6a;
+  padding-left: 3px;
+  font-family: 'Space Mono', monospace;
+  font-weight: 600;
+  gap: 0.375rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.link-youtube-text {
+  color: #fd0001;
+  padding-left: 6px;
+  font-family: 'Space Mono', monospace;
+  font-weight: 600;
+  gap: 0.375rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 .home-icon {
@@ -56,6 +137,12 @@ body {
   grid-template-columns: 33% 33% 33%;
 }
 
+.central-nav-button-mods {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  margin-bottom: 5px;
+}
+
 .central-nav-buttons button {
   width: 70px;
   height: 40px;
@@ -65,12 +152,7 @@ body {
   cursor: pointer;
   margin-right: 5px;
   font-size: 14px;
-}
-
-.central-nav-button-mods {
-  display: grid;
-  grid-template-columns: 45% 55%;
-  margin-bottom: 5px;
+  border: 2px solid #14da6a;
 }
 
 .central-nav-buttons-dropdown-arrow {
@@ -83,3 +165,46 @@ body {
   color: white;
 }
 
+.mod-dropdown-box {
+  width: 175px;
+  height: 250px;
+  border: 2px solid #14da6a;
+  border-radius: 17px;
+  padding: 10px;
+  position: absolute;
+  left: 43%;
+  top: 7%;
+  background-color: #1B1B1B;
+  z-index: 5;
+  overflow-x: hidden;
+  overflow-y: visible;
+  scrollbar-color: #14da6a #1B1B1B;
+  scrollbar-width: none;
+}
+
+.mod-dropdown-box-element {
+  border: 0;
+  border-radius: 15px;
+  cursor: pointer;
+  /*display: grid;*/
+  /*grid-template-columns: 30% 70%;*/
+  padding: 10px 5px 4px;
+  width: 153px;
+  height: 33px;
+  color: #fff;
+  z-index: 6;
+  margin-left: 6px;
+  margin-bottom: 7px;
+  background-color: #1B1B1B;
+  box-shadow: inset 0 0 8px 5px #14da6a;
+}
+
+.mod-dropdown-box-element:hover {
+  box-shadow: inset 0 0 8px 5px #10A3EB;
+}
+
+.mod-dropdown-box-element-title {
+  padding-left: 5px;
+  z-index: 6;
+  cursor: pointer;
+}
