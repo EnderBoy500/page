@@ -32,7 +32,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutMe />} />
-        <Route path="/mod/" element={<ModInfo />}/>
       </Routes>
     </Router>
   </>);

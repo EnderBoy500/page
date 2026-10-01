@@ -1,0 +1,44 @@
+.modrinth-mod-card {
+    border: #14da6a solid 3px;
+    border-radius: 15px;
+    padding: 15px 15px 45px;
+    margin: 10px;
+    width: 706px;
+    height: 77px;
+    color: #fff;
+    z-index: 6;
+    background-color: #1B1B1B;
+    display: grid;
+    grid-template-columns: 12% 43% 45%;
+}
+
+/*.modrinth-mod-card:hover {*/
+/*    width: 736px;*/
+/*    height: 97px;*/
+/*    margin: 5px;*/
+/*}*/
+
+.modrinth-mod-card-icon {
+    width: 75px;
+    height: 75px;
+    border: 0;
+    margin-top: 16px;
+    border-radius: 15px;
+}
+
+.modrinth-mod-card-text {
+    width: 352px;
+    height: 115px;
+    display: grid;
+    grid-template-rows: 25% 75%;
+}
+
+.modrinth-mod-card-title {
+    height: 25px;
+}
+
+.modrinth-mod-card-desc {
+    color: dimgray;
+    margin-top: 30px;
+    height: 25px;
+}

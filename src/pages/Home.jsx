@@ -1,4 +1,5 @@
 import NavBar from "../components/NavBar.jsx";
+import ModrinthModCard from "../components/ModrinthModCard.jsx";
 
 function Home() {
     function goToGithub() {
@@ -39,6 +40,24 @@ function Home() {
                     </p>
                 </div>
             </div>
+        </div>
+
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
+        <div className="mod-card-list">
+            <ModrinthModCard modId="netherandend"/>
         </div>
     </>);
 }
