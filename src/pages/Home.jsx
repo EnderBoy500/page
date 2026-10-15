@@ -57,7 +57,7 @@ function Home() {
         <br/>
 
         <div className="mod-card-list">
-            <ModrinthModCard modId="netherandend"/>
+            <ModrinthModCard modId="netherandend" githubId="Ciph3rJ/NetherAndEnd" isOpenSource={true}/>
         </div>
     </>);
 }
