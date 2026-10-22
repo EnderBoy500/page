@@ -58,6 +58,14 @@ function Home() {
 
         <div className="mod-card-list">
             <ModrinthModCard modId="netherandend" githubId="Ciph3rJ/NetherAndEnd" isOpenSource={true}/>
+            <ModrinthModCard modId="ironandsteel"/>
+            <ModrinthModCard modId="tricks-and-traps"/>
+            <ModrinthModCard modId="lootbundles"/>
+            <ModrinthModCard modId="stains-and-colors"/>
+            <ModrinthModCard modId="allay-vex-conversion" githubId="Ciph3rJ/AllayVexConversion" isOpenSource={true}/>
+            <ModrinthModCard modId="bellum" githubId="EnderBoy500/Bellum" isOpenSource={true}/>
+            <ModrinthModCard modId="cipherlib" githubId="EnderBoy500/Bellum" isOpenSource={true}/>
+            <ModrinthModCard modId="raven-mail" githubId="EnderBoy500/RavenMail" isOpenSource={true} hasWiki={true}/>
         </div>
     </>);
 }
